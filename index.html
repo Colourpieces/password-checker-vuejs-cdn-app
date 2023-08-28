@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Checker</title>
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+</head>
+
+<body>
+    <div id="app">
+        <div class="content-wrapper">
+            <h1 class="headline">Password Check</h1>
+            <form>
+                <!-- <input :type="inputType" :value="firstPassword" id="firstPassword"
+                    v-on:input="setInput('firstPassword', $event)">
+                <input :type="inputType" :value="secondPassword" id="secondPassword"
+                    v-on:input="secondPassword = $event.target.value"> -->
+
+                <input :type="inputType" :value="firstPassword" id="firstPassword" v-model="firstPassword">
+                <input :type="inputType" :value="secondPassword" id="secondPassword" v-model="secondPassword">
+
+                <button @click.prevent="togglePassword">{{buttonText}}</button>
+            </form>
+
+            <div class="passwordsHints" v-if="firstPassword !== '' && secondPassword !== ''">
+                <p>passwords are equal <span v-if="isEqual">✅</span><span v-else>❌</span></p>
+                <p>lower case letters <span v-if="hasLowerCase">✅</span><span v-else>❌</span></p>
+                <p> upper case letters <span v-if="hasUpperCase">✅</span><span v-else>❌</span></p>
+                <p>contains numbers <span v-if="hasNumber">✅</span><span v-else>❌</span></p>
+                <p>at least {{passwordLength}} characters long <span v-if="isLongEnough">✅</span> <span v-else>❌</span>
+                </p>
+            </div>
+        </div>
+
+
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>

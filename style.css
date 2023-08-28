@@ -1,0 +1,36 @@
+h1 {
+  font-family: "Lobster", cursive;
+
+  color: white;
+}
+
+body {
+  height: 100vh;
+  margin: 0;
+  background-color: lightgray;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.content-wrapper {
+  border: 2px solid grey;
+  background-color: goldenrod;
+  padding: 0.5rem;
+  min-width: 50vh;
+
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  justify-content: center;
+  align-items: center;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+
+  max-width: 300px;
+}
