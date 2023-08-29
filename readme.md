@@ -8,9 +8,9 @@ Please refactor your password check app from the web apps foundation checkpoint 
 - [x] Add the Vue 3 Package via [CDN](https://v3.vuejs.org/guide/installation.html#cdn)
 - [x] Create a VueJS application instance
 - [x] Mount the application to a `#app` container
-- [ ] Create the necessary state properties in the `data()` area
-- [ ] Create the necessary computed properties in the `computed()` area
-- [ ] Create a Vue template that uses all the properties
+- [x] Create the necessary state properties in the `data()` area
+- [x] Create the necessary computed properties in the `computed()` area
+- [x] Create a Vue template that uses all the properties
 
 ## Hints
 

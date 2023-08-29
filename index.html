@@ -31,12 +31,15 @@
             </form>
 
             <div class="passwordsHints" v-if="firstPassword !== '' && secondPassword !== ''">
-                <p>passwords are equal <span v-if="isEqual">✅</span><span v-else>❌</span></p>
-                <p>lower case letters <span v-if="hasLowerCase">✅</span><span v-else>❌</span></p>
-                <p> upper case letters <span v-if="hasUpperCase">✅</span><span v-else>❌</span></p>
-                <p>contains numbers <span v-if="hasNumber">✅</span><span v-else>❌</span></p>
-                <p>at least {{passwordLength}} characters long <span v-if="isLongEnough">✅</span> <span v-else>❌</span>
-                </p>
+                <p>passwords are equal <span v-if="checkIsEqual">✅</span><span v-else>❌</span></p>
+                <div v-if="isEqual">
+                    <p>lower case letters <span v-if="hasLowerCase">✅</span><span v-else>❌</span></p>
+                    <p> upper case letters <span v-if="hasUpperCase">✅</span><span v-else>❌</span></p>
+                    <p>contains numbers <span v-if="hasNumber">✅</span><span v-else>❌</span></p>
+                    <p>at least {{passwordLength}} characters long <span v-if="isLongEnough">✅</span> <span
+                            v-else>❌</span>
+                    </p>
+                </div>
             </div>
         </div>
 

@@ -10,6 +10,8 @@ createApp({
       inputType: "password",
       buttonText: "Show Password",
 
+      isEqual: false,
+
       passwordLength: 5,
     };
   },
@@ -38,9 +40,18 @@ createApp({
       }
     },
 
-    isEqual() {
+    checkIsEqual() {
+      if (this.firstPassword === this.secondPassword) {
+        this.isEqual = true;
+      } else {
+        this.isEqual = false;
+      }
       return this.firstPassword === this.secondPassword;
     },
+    // isEqual() {
+    //   return this.firstPassword === this.secondPassword;
+    // },
+
     hasLowerCase() {
       let containsLowerCase = false;
       for (i = 0; i < this.firstPassword.length; i++) {
@@ -74,3 +85,9 @@ createApp({
     },
   },
 }).mount("#app");
+
+/* 
+offene Fragen
+
+Button Show Password muss beim 1. Mal 2 mal geklcikt werden.. danach funktioniert er beim 1. Klick
+*/
